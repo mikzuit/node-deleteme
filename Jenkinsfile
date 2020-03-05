@@ -3,7 +3,9 @@ pipeline {
     stages {
         stage('Cloning Git') {
             steps {
-                git 'https://github.com/mikzuit/node-deleteme.git'
+                git branch: dev,
+                    credentialsId: '422ce27d-dd27-4495-be91-5d4cf403eea5',
+                    url:'https://github.com/mikzuit/node-deleteme.git'
             }
         }
 
