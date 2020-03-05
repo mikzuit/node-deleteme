@@ -7,9 +7,20 @@
     "repository": {},
     "license": "MIT",
     "scripts": {
-        "start": "node server.js"
+        "start": "node server.js",
+        "test": "jest"
     },
     "dependencies": {
         "express": "4.17.1"
+    },
+    "devDependencies": {
+        "jest": "^25.1.0",
+        "supertest": "^4.0.2"
+    },
+    "jest": {
+        "testEnvironment": "node",
+        "coveragePathIgnorePatterns": [
+            "/node_modules"
+        ]
     }
 }
