@@ -1,11 +1,13 @@
 FROM node:10-alpine
 
-WORKDIR /usr/src/app
+RUN apk add --update --no-cache python make g++
+
+WORKDIR /srv/deleteme
 
 COPY package*.json ./
 
 RUN npm install
 
-VOLUME /usr/src/app
+VOLUME /srv/deleteme
 
 EXPOSE 8080
